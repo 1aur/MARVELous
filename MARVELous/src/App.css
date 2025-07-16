@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Anton:wght@400&display=swap');
+
+body, .App {
+  background: linear-gradient(135deg, #7b1818 0%, #1a0000 100%);
+  color: #fff;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Bebas Neue', 'Anton', Impact, Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 2px 2px 0 #b71c1c, 4px 4px 12px #000;
+  border: 4px solid #fff;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  background: rgba(123, 24, 24, 0.85);
+  box-shadow: 0 4px 24px #1a0000cc;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  font-family: 'Bebas Neue', 'Anton', Impact, Arial, sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 0 #b71c1c;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.controls input[type="text"] {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #b71c1c;
+  background: #2d0a0a;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+.controls input[type="text"]:focus {
+  border: 2px solid #fff;
+}
+
+.controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #b71c1c;
+  background: #2d0a0a;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border 0.2s;
+}
+.controls select:focus {
+  border: 2px solid #fff;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 3rem auto;
+  padding: 0 2vw;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(135deg, #b71c1c 0%, #2d0a0a 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #1a0000cc;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: 3px solid #fff;
+  margin-bottom: 2rem;
+  min-width: 0;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px #b71c1ccc;
+  border: 3px solid #b71c1c;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+  background: #181818;
+  box-shadow: 0 2px 8px #1a0000cc;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0.2rem 0;
+  text-align: center;
+  font-family: 'Bebas Neue', 'Anton', Impact, Arial, sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0 #b71c1c;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 0 #b71c1c;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .list {
+    gap: 1rem;
+    padding: 0 1vw;
+  }
+  .card {
+    padding: 0.7rem;
+  }
+  header h1 {
+    font-size: 2rem;
+    padding: 0.3rem 1rem;
+  }
+}
